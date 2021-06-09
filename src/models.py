@@ -12,7 +12,7 @@ class VITModel(nn.Module):
     def __init__(self, model_name=Config.model_name, pretrained=True):
         super(VITModel, self).__init__()
         self.backbone = timm.create_model(model_name, pretrained, in_chans=1)
-        self.backbone.head = nn.Linear(self.model.head.in_features, Config.LABELS)
+        self.backbone.head = nn.Linear(self.backbone.head.in_features, Config.LABELS)
     
     def forward(self, x):
         x = self.backbone(x)
