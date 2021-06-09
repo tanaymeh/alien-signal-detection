@@ -7,3 +7,5 @@ class Config:
     num_workers = 8
     NB_EPOCHS = 10
     LABELS = 1
+    FILE = "../input/seti-breakthrough-listen/train_labels.csv"
+    FOLDER = "../input/seti-breakthrough-listen/train"
